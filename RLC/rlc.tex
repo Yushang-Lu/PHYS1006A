@@ -1,0 +1,302 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{zhnumber} % change section number to chinese
+\usepackage{setspace}
+\renewcommand \thesubsection {\arabic{subsection}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\CTEXsetup[format={\songti\zihao{5}\bfseries}]{section}
+\CTEXsetup[format={\songti\zihao{5}}]{subsection}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=2.54cm,
+    bottom=2.54cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\raisebox{1\baselineskip}{\thepage}} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{>{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}}
+    班号 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}\\[10pt]
+\begin{tabular}{>{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}
+                >{\heiti\bfseries\zihao{5}}p{3.2cm}}
+    实验日期 \hrulefill & 组号 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent} \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\vspace{8pt}
+
+\begin{center}
+    \textbf{\heiti\zihao{-4} 实验名称 \ \ \ RLC电路暂态特性的研究}
+\end{center}
+
+\section*{一、预习}
+{
+{\songti\zihao{5}\indent 1. $RC$、$RL$串联电路暂态过程电压表达式，以及时间常数$\tau$的表达式是什么？\par}\vspace{4pt}
+{\songti\zihao{5}\indent 2. $RLC$串联电路的暂态过程（三种阻尼过程）电压表达式、时间常数$\tau$表达式是什\par \ \ \ 么？\par}\vspace{4pt}
+{\songti\zihao{5}\indent 3. 请绘制数字示波器、信号发生器观测$RC$、$RL$和$RLC$串联电路的的连接线路示意\par \ \ \ \ 图。}
+}
+\newpage
+\section*{二、原始数据记录}
+{\bfseries1.$RC$串联电路的暂态特性}{(使用方波信号进行实验，可取$V_{pp} = 10V$)}
+
+\indent\indent $R_{\text{电阻}} = 500\varOmega$ \indent 方波信号周期 $T=10\tau$
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|C{12em}|C{4.5em}|C{4.5em}|C{4.5em}|C{4.5em}|}
+    \hline
+    \multicolumn{1}{|c|}{\diagbox[width=12em,height=1.7em]{}{C}} & \textbf{$0.022\mu F$} & \textbf{$10 \mu F$} & \textbf{$100\mu F$} & \textbf{$470\mu F$} \\
+    \hline
+    \rule{0pt}{6ex}\shortstack{总电阻$R_{\text{总}}$\\$\left(R_{\text{总}}=R_{\text{电阻}}+R_{\text{S}}\right)$} & & & & \\
+    \hline
+    理论时间常数$\tau$ $\left(\tau=R_{\text{总}}C\right)$ & & & & \\
+    \hline
+    实测时间常数$\tau$ & & & & \\
+    \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
+\end{table}
+
+{\bfseries2.$RL$串联电路的暂态过程}{(使用方波信号进行实验，可取$V_{pp} = 10V$)}
+
+\indent\indent $L= 10 mH$ \indent 方波信号周期$T=10\tau$
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|C{12em}|C{4.5em}|C{4.5em}|C{4.5em}|}
+    \hline
+    \multicolumn{1}{|c|}{\diagbox[width=12em,height=1.7em]{}{R}} & \textbf{$100\Omega$} & \textbf{$500\Omega$} & \textbf{$900\Omega$}  \\
+    \hline
+    \rule{0pt}{6ex}\shortstack{总电阻$R_{\text{总}}$\\$\left(R_{\text{总}}=R_{\text{电阻}}+R_{\text{S}}+R_{\text{L}}\right)$} & & & \\
+    \hline
+    理论时间常数$\tau$ $\left(\tau=L/R_{\text{总}}\right)$ & & & \\
+    \hline
+    $\Delta V\left(V\right)$ & & & \\
+    \hline
+    $0.632\times\Delta V\left(V\right)$ & & & \\
+    \hline
+    实测时间常数$\tau$ & & & \\
+    \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
+\end{table}
+
+{\bfseries3.$RLC$串联电路的暂态过程}{(使用方波信号进行实验，可取$V_{pp} = 10V$)} \onehalfspacing
+
+\indent\indent 电容$L=10mH$, $C=0.22\mu F$，信号源内阻$R_S = 50\Omega$ \onehalfspacing
+\\\indent\indent 测量欠阻尼情况下充电振荡波形的峰值$U_{ct_1 }$以及相应的时间$t_i$
+
+\begin{table}[!htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|p{4.5em}|p{4.5em}|p{4.5em}|p{4.5em}|p{4.5em}|}
+    \hline
+    $U_cti/V$ & & & & & \\
+    \hline
+    $t_i\mu s$ & & & & & \\
+    \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
+\end{table}
+
+\indent\indent $E = $10V,  $R_{\text{电阻}} = $0
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+\newpage
+
+\section*{三、数据处理}
+
+\subsection{记录各项实验任务过程中的R、C和L各参数值，示波器观察到的波形，以及时间常数$\tau$，并与理论值比较。}
+
+在实验中，RC与RL电路中均出现了良好的预期图像：
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{rc.png}
+
+        RC曲线（$C=10\mu F$）
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{rl.png}
+
+        RL曲线（$R=500\Omega$）
+    \end{minipage}
+    \caption{RC与RL电路波形}
+    \label{fig: rc-rl-pic}
+\end{figure}
+
+根据上页相关数据记录，在RC和RL电路中，理论时间常数$\tau$与实测时间常数$\tau$的误差较小，均在15\%以内，说明实验结果与理论预期较为一致。
+
+\subsection{在RLC串联电路中，测量欠阻尼情况下$U_C$充电时振荡波形峰值$U_{ct_i}$和$t_i$，采用最小二乘法或作图法求出$ \ln\left(E-UC\right) \sim t$的斜率，计算时间常数$\tau$，并与理论值 $\tau = \frac{2L}{R}$（$R=R_\text{\songti 阻}+ R_S+ R_L$）进行比较，分析误差产生的原因。}
+
+理论显示相邻波峰出现的周期$T$应近似为定值，故在实验中可采用逐差法测得$T = 6.93 \mu s$。又因为在欠阻尼充电过程中各波峰满足$U_C>E$，所以应取
+\[
+\ln\left(U_C-E\right)
+\]
+并对其关于$t$作线性拟合。根据测得的峰值数据$U_C=(14.3,13.9,13.4,13.0,12.6)\,\mathrm{V}$，计算结果如下表所示：
+
+\begin{table}[h]
+    \centering
+    \caption{$ \ln\left(U_C-E\right) \sim t$}
+    \label{tab:Ks}
+    \begin{tabular}{ c | c c c c c}
+      \toprule
+      $t(\mu s)$  & 2.80 & 9.60 & 16.6 & 23.6 & 30.4 \\
+      \hline
+      $\ln\left(U_C-E\right)$ & 1.4586 & 1.3610 & 1.2238 & 1.0986 & 0.9555 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+设
+\[
+y=\ln\left(U_C-E\right)=k_0+k_1 t
+\]
+则可利用最小二乘法进行线性拟合。在 Python 中采用矩阵形式计算时，可写为：
+
+$$
+A =
+\begin{bmatrix}
+    1 & 2.80 \\
+    1 & 9.60 \\
+    1 & 16.6 \\
+    1 & 23.6 \\
+    1 & 30.4
+\end{bmatrix},
+\qquad
+Y =
+\begin{bmatrix}
+    1.4586 \\
+    1.3610 \\
+    1.2238 \\
+    1.0986 \\
+    0.9555
+\end{bmatrix}
+$$
+
+带入公式：
+$$
+\widehat{K} = {(A^T A)}^{-1} A^T Y
+$$
+
+其中
+\[
+\widehat{K} =
+\begin{bmatrix}
+    k_0 \\
+    k_1
+\end{bmatrix}
+\]
+即为所求参数。
+
+~
+
+计算得：
+$$\widehat{K} = \begin{bmatrix} 1.5238 \\ -0.01833 \end{bmatrix} $$
+
+因此拟合直线为
+\[
+\ln\left(U_C-E\right)=1.5238-0.01833\,t
+\qquad (t\text{ 的单位为 }\mu s)
+\]
+而理论上有
+\[
+\ln\left(U_C-E\right)=\ln A-\frac{t}{\tau}
+\]
+故
+\[
+\frac{1}{\tau}=-k_1=0.01833\,\mu s^{-1}=1.833\times 10^4\,s^{-1}
+\]
+从而得到
+\[
+\tau=54.55\,\mu s=5.455\times10^{-5}\,s
+\]
+
+若按$\tau=\frac{2L}{R}$并取$L=10\,\mathrm{mH}$、$R=56.5\,\Omega$计算，则
+\[
+\frac{1}{\tau}=\frac{R}{2L}=2.825\times 10^4\,s^{-1}
+\]
+可见实验间接得到的$\frac{1}{\tau}$相对于理论值偏大，经分析有以下可能：
+
+\begin{itemize}
+    \item 理论计算时信号源内阻、电感、电容寄生电阻的估算值偏小，使得理论值$\frac{1}{\tau}=\frac{R}{2L}$偏小，从而使实验值偏大。这可能是误差的主要来源。
+    \item 同时在测量中存在随机误差。示波器读取峰值电压与峰值时刻时，仪器精度会影响拟合结果。实验环境可能存在电磁干扰，温度变化等额外因素，也会造成随机误差。
+\end{itemize}
+
+\section*{四、实验现象分析及结论}
+\subsection*{1. RC和RL电路}
+
+\begin{itemize}
+    \item 对于$RC$或$RL$电路，换路后电容电压或电感电流不跃变，随后电容电压或电感电流按照指数规律变化，并且在充电或放电过程中，电压或电流的变化速率逐渐减慢。
+    \item 其中，指数项$e^{-t/\tau}$中的$\tau$表征了储能元件（电感和电容）的状态变化快慢，称为时间常数。对于RL电路，$\tau = \frac{L}{R}$,对于RC电路，$\tau = RC$。时间常数越大，电压或电流的变化越慢；时间常数越小，变化越快。
+\end{itemize}
+
+\subsection*{2. RLC电路}
+
+\begin{itemize}
+    \item 在RLC电路中，当施加一个方波或者一个电压脉冲，且电路在欠阻尼状态（即$R<2\sqrt{\frac{L}{C}}$）时，电路中会出现振荡现象。振荡的频率和振幅取决于电感、电容和电阻的数值，以及激励信号的特性。
+    \item 振荡的发生是由于电容和电感之间的能量交换。当施加激励时，电容开始充电或放电，而电感则试图保持电流不变。这种电荷和电流的变化导致了电路中的能量在电容和电感之间的周期性转换，从而产生振荡。
+\end{itemize}
+
+\section*{五、讨论题}
+
+\subsection*{1. 在RC和RL电路中，固定方波频率$f$而改变R的阻值，为什么会有各种不同的波形？若固定R而改变方波频$f$，会得到类似的波形吗？为什么？}
+
+在RC电路中，当R变小时，$\tau$也变小，充放电时间变短，中间电压保持水平时间变长；而R变大时，$\tau$变大，波形会逐渐变成三角波的形状，这是因为电容器还没有来得及充满电，两级电压就发生了反转，导致电容器开始放电。
+
+而在RL电路中，由于$\tau$中$R$的计算位置变化，波形会形成与RC电路相反的结果。
+
+在RC和RL电路中，若固定R而改变方波频率$f$,单独充放电（充能放能）过程关于时间的函数是不变的，但是$f$的改变会改变充放电（充能放能）的时间，如果$f$变小，则电路有了更多的时间进行充放电（充能放能），两个充放电（充能放能）曲线之间的间隔会被拉长；而如果$f$变大，那么信号发生器就不会给电路足够的时间进行充放电（充能放能），逐渐形成三角波。
+
+\subsection*{2. 在RLC电路中，为什么要适当调节方波频率才能观测到阻尼振荡的波形？如果频率很高，将会发生什么样的情况？试观察。}
+
+如果方波信号的频率过高，电路还没有结束震荡、形成稳定的状态就会进行下一步响应，导致不同周期的振荡波形相互叠加，使示波器上观察到的波形发生畸变，难以分辨出完整的阻尼振荡过程，无法实现实验效果。
+
+\end{document}

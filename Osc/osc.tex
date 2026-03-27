@@ -1,0 +1,211 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{subsection}}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=2.54cm,
+    bottom=2.54cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\raisebox{1\baselineskip}{\thepage}} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{p{2.4cm}p{2.4cm}p{4cm}p{4cm}}
+    班级 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}
+\begin{tabular}{p{6cm}p{3.6cm}p{3.6cm}}
+    实验日期 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent}	 \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\begin{center}
+    \Large \textbf{实验内容 \underline{示波器实验（虚拟仿真）}}
+\end{center}
+
+\section{实验预习}
+
+\subsection{示波器的基本结构主要有哪些？}
+~ \\
+~ \\
+~ \\
+~ \\ 
+~ \\
+~ \\
+~ \\
+~ \\
+~ \\
+~ \\ 
+~ \\
+~ \\
+\subsection{李萨如图形形成原理是什么？如何利用李萨如图形测量待测信号频率？}
+
+\newpage
+
+\section{实验现象及原始数据记录}
+
+实验模式
+
+\subsection{测量示波器自备方波输出信号的周期（时基分别为0.1、0.2、0.5 $ms/DIV$）。}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{方波信号频率测量}
+    \label{tab:self}
+    \begin{tabular}{|m{3cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
+        \hline
+        选择时基（ms）&0.1&0.2&0.5\\
+        \hline
+        方波信号（Hz）& & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{用示波器测量信号发生器输出的方波信号频率。}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{信号发生器输出的方波信号频率测量}
+    \label{tab:self_1}
+    \begin{tabular}{|m{2cm}<{\centering}|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        时基（ms）&0.5&0.5&0.2&0.2& 0.1& 0.1 & 0.1 & 0.1 & 0.1 & 0.05 \\
+        \hline
+        格数 & & & & & & & & & & \\
+        \hline
+        周期（ms） & & & & & & & & & & \\
+        \hline
+        频率（Hz）& & & & & & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{三角波信号的测量。}
+
+\subsubsection{选择信号发生器输出三角波，频率分别为500、1K、1.5K、2K Hz；}
+\subsubsection{测量各个频率下三角波的上升时间、下降时间和周期。}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{不同频率下三角波信号测量}
+    \label{tab:self_2}
+    \begin{tabular}{|m{3.5cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
+        \hline
+        频率（Hz） & 500 & 1000 & 1500 & 2000 \\
+        \hline
+        三角波信号上升时间（ms） & & & & \\
+        \hline
+        三角波信号下降时间（ms）& & & & \\
+        \hline
+        三角波信号周期（ms）& & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{观察李萨如图形并测频率。}
+用待测信号源（正弦信号）和信号发生器分别接 y 轴（CH2通道）和 x 轴（CH1通道），取$\frac{f_x}{f_y}$为1、 1/2、2时，测出对应的$f_x$和$f_y$，记录有关图形并求出待测信号的频率。
+
+\newpage
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{利用李萨如图形测量信号频率}
+    \label{tab:self_3}
+    \begin{tabular}{|m{2cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|}
+        \hline
+        $f_x / f_y$ & 1 & 2/1 & 1/2 \\
+        \hline
+        待测信号频率（Hz） & & & \\
+        \hline
+        信号发生器频率（Hz）& & & \\
+        \hline
+        各$\frac{f_x}{f_y}$比例对应的李萨如图像  & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+
+\newpage
+\subsection{实验结论及现象分析}
+\begin{enumerate}
+    \item 测量示波器自备方波输出信号的周期（时基分别为0.1、0.2、0.5 $ms/DIV$）。\\ 由表一数据可以推断出：时基为0.1 $ms/DIV$时，测得的方波信号数据最准确，可能的原因是在合适的时基范围内，时基的值越小，屏幕上的信号图像占的格数越多，根据格数测得的数据会更加精确。
+    \item 用示波器测量信号发生器输出的方波信号频率。\\ 以信号发生器的频率为 X，示波器测量的频率为 Y，使用最小二乘法拟合出 Y-X 曲线：
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{diagram.png}
+    \end{center}
+    图中直线的斜率与1相近，说明示波器测得的频率与信号发生器输出的频率基本一致，但存在一定的微小误差， 此误差可能源于读数方面的微小偏差。
+    \item 三角波信号的测量。\\ 由表3数据可以看出，三角波信号的上升时间和下降时间大体一致， 均约为对应信号周期的$\frac{1}{2}$。
+    \item 观察李萨如图形并测频率。\\ 实验中得到以下图形（其中$f_x$和$f_y$分别表示信号发生器和待测信号的频率）：
+    \begin{center}
+        \begin{minipage}{0.26\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{graph1.JPG}\\[0.3em]
+            \small $\frac{f_x}{f_y} = 1$
+        \end{minipage}\hfill
+        \begin{minipage}{0.26\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{graph2.JPG}\\[0.3em]
+            \small $\frac{f_x}{f_y} = \frac{2}{1}$
+        \end{minipage}\hfill
+        \begin{minipage}{0.26\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{graph3.JPG}\\[0.3em]
+            \small $\frac{f_x}{f_y} = \frac{1}{2}$
+        \end{minipage}
+    \end{center}
+    最终测得待测信号频率约为3000Hz。
+\end{enumerate}
+
+\subsection{讨论题}
+
+\textbf{假定在示波器的y轴输入一个正弦电压，所用的水平扫描频率为120Hz，在荧光屏上出现三个稳定的正弦波形，那么输入信号的频率是多少？这是否是测量信号频率的好方法？为什么？}
+
+易知输入信号的频率是水平扫描频率的三倍，所以输入信号的频率
+
+\begin{equation*}
+f = 3 \times 120Hz=360Hz
+\end{equation*}
+
+这种方法误差较大，并不是测量信号频率的最佳方法，因为它依赖于水平扫描频率的准确性和稳定性，如果水平扫描频率不稳定或者不准确，那么测得的信号频率也会有误差。
+
+\end{document}

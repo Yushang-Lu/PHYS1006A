@@ -4,6 +4,7 @@
 *.cfg
 __pycache__/
 *.pyc
+.mplconfig
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

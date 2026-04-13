@@ -64,7 +64,7 @@ def plot_frequency_curve(x_values: list[float], y_values: list[float], output_pa
         markeredgewidth=1.2,
     )
 
-    style_axes(ax, "Oscillation frequency / kHz", "Bulb voltage / V")
+    style_axes(ax, "Frequency / kHz", "Vpp / V")
     ax.set_xlim(2080, 2440)
     ax.set_ylim(7.5, 17.5)
     ax.xaxis.set_major_locator(MultipleLocator(40))
@@ -84,17 +84,6 @@ def plot_frequency_curve(x_values: list[float], y_values: list[float], output_pa
         bbox={"boxstyle": "round,pad=0.28", "fc": "white", "ec": "#999999", "alpha": 0.92},
     )
 
-    ax.text(
-        0.03,
-        0.93,
-        "Voltage rises first and then falls.",
-        transform=ax.transAxes,
-        fontsize=9.5,
-        ha="left",
-        va="top",
-        bbox={"boxstyle": "round,pad=0.25", "fc": "white", "ec": "#d0d0d0", "alpha": 0.9},
-    )
-
     fig.tight_layout()
     fig.savefig(output_path, bbox_inches="tight")
     plt.close(fig)
@@ -109,7 +98,7 @@ def plot_distance_curve(x_values: list[float], y_values: list[float], output_pat
     ax.plot(
         x,
         y,
-        color="#2e8b57",
+        color="#1f5aa6",
         linewidth=2.0,
         marker="s",
         markersize=5.2,
@@ -117,7 +106,7 @@ def plot_distance_curve(x_values: list[float], y_values: list[float], output_pat
         markeredgewidth=1.1,
     )
 
-    style_axes(ax, "Transmission distance / cm", "Bulb voltage / V")
+    style_axes(ax, "Distance / cm", "Vpp / V")
     ax.set_xlim(9, 32)
     ax.set_ylim(7.5, 19.5)
     ax.xaxis.set_major_locator(MultipleLocator(3))
@@ -135,17 +124,6 @@ def plot_distance_curve(x_values: list[float], y_values: list[float], output_pat
         va="top",
         arrowprops={"arrowstyle": "->", "lw": 0.9, "color": "#555555"},
         bbox={"boxstyle": "round,pad=0.28", "fc": "white", "ec": "#999999", "alpha": 0.92},
-    )
-
-    ax.text(
-        0.03,
-        0.93,
-        "Best performance appears near 19 cm.",
-        transform=ax.transAxes,
-        fontsize=9.5,
-        ha="left",
-        va="top",
-        bbox={"boxstyle": "round,pad=0.25", "fc": "white", "ec": "#d0d0d0", "alpha": 0.9},
     )
 
     fig.tight_layout()

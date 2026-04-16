@@ -104,6 +104,7 @@ def plot_curve(x_values, y_values, xlabel, ylabel, legend_label, output_name):
 def main():
     k1, intercept1 = least_squares_fit(b, a)
     k2, intercept2 = least_squares_fit(d, c)
+    vout_b_linear_slope, vout_b_linear_intercept = least_squares_fit(i[8:17], h[8:17])
     kh_average, kh_values = calculate_average_hall_coefficient(a, e, HALL_CURRENT_A)
 
     if plt is not None:
@@ -144,6 +145,8 @@ def main():
     print(f"intercept1 = {intercept1:.6f}")
     print(f"k2 = {k2:.6f}")
     print(f"intercept2 = {intercept2:.6f}")
+    print(f"linear_range_slope = {vout_b_linear_slope:.6f}")
+    print(f"linear_range_intercept = {vout_b_linear_intercept:.6f}")
     print(
         "K_H values from a/e = "
         + ", ".join(f"{value:.6f}" for value in kh_values)

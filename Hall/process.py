@@ -36,6 +36,10 @@ h = [-18.7, -20.8, -22.1, -23.8, -26.3, -25.5, -25.6, -22.0, -17.8, -13.4,
 i = [16.7, 15.3, 13.9, 12.5, 11.1, 9.8, 8.4, 7.0, 5.6, 4.2,
      2.8, 1.4, 0.0, -1.4, -2.8, -4.2, -5.6, -7.0, -8.4, -9.8,
      -11.1, -12.5, -13.9, -15.3, -16.7] # B (Gs)
+j = [-13.4, -13.3, -13.1, -12.8, -12.4, -11.9, -11.4, -10.7, -10.0, -9.1,
+     -8.2, -7.1, -6.0, -4.8, -3.7, -2.4, -1.0, 0.2, 1.6] # V_OUT (mV)
+k = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45,
+     50, 55, 60, 65, 70, 75, 80, 85, 90] # theta (degrees)
 
 LINE_COLOR = "#1f77b4"
 HALL_CURRENT_A = 0.005
@@ -140,6 +144,14 @@ def main():
             r"$V_{OUT}-B$ 曲线",
             "vout_b_curve.png",
         )
+        plot_curve(
+            k,
+            j,
+            r"$\theta\left(^{\circ}\right)$",
+            r"$V_{OUT}\left(\mathrm{mV}\right)$",
+            r"$V_{OUT}-\theta$ 曲线",
+            "vout_theta_curve.png",
+        )
 
     print(f"k1 = {k1:.6f}")
     print(f"intercept1 = {intercept1:.6f}")
@@ -164,6 +176,7 @@ def main():
         print(f"Saved: {OUTPUT_DIR / 'vh_is_curve.png'}")
         print(f"Saved: {OUTPUT_DIR / 'b_x_curve.png'}")
         print(f"Saved: {OUTPUT_DIR / 'vout_b_curve.png'}")
+        print(f"Saved: {OUTPUT_DIR / 'vout_theta_curve.png'}")
     else:
         print("Skipped plotting because matplotlib is not installed.")
 

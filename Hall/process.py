@@ -30,6 +30,12 @@ f = [1.22, 1.41, 1.64, 2.08, 3.66, 5.23, 5.85, 6.73, 7.00, 7.24,
 g = [0.0, 2.0, 4.0, 8.0, 16.0, 24.0, 32.0, 40.0, 48.0, 64.0,
      96.0, 128.0, 150.0, 172.0, 204.0, 236.0, 252.0, 260.0, 268.0, 276.0,
      284.0, 292.0, 296.0, 298.0, 300.0] # x (mm)
+h = [-18.7, -20.8, -22.1, -23.8, -26.3, -25.5, -25.6, -22.0, -17.8, -13.4,
+     -8.8, -4.0, 0.7, 6.0, 10.7, 15.3, 19.6, 23.7, 27.3, 30.3,
+     32.6, 33.8, 29.1, 22.6, 18.8] # V_OUT (mV)
+i = [16.7, 15.3, 13.9, 12.5, 11.1, 9.8, 8.4, 7.0, 5.6, 4.2,
+     2.8, 1.4, 0.0, -1.4, -2.8, -4.2, -5.6, -7.0, -8.4, -9.8,
+     -11.1, -12.5, -13.9, -15.3, -16.7] # B (Gs)
 
 LINE_COLOR = "#1f77b4"
 HALL_CURRENT_A = 0.005
@@ -125,6 +131,14 @@ def main():
             r"$B-X$ 曲线",
             "b_x_curve.png",
         )
+        plot_curve(
+            i,
+            h,
+            r"$B\left(\mathrm{Gs}\right)$",
+            r"$V_{OUT}\left(\mathrm{mV}\right)$",
+            r"$V_{OUT}-B$ 曲线",
+            "vout_b_curve.png",
+        )
 
     print(f"k1 = {k1:.6f}")
     print(f"intercept1 = {intercept1:.6f}")
@@ -146,6 +160,7 @@ def main():
         print(f"Saved: {OUTPUT_DIR / 'vh_im_curve.png'}")
         print(f"Saved: {OUTPUT_DIR / 'vh_is_curve.png'}")
         print(f"Saved: {OUTPUT_DIR / 'b_x_curve.png'}")
+        print(f"Saved: {OUTPUT_DIR / 'vout_b_curve.png'}")
     else:
         print("Skipped plotting because matplotlib is not installed.")
 

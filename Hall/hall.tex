@@ -217,9 +217,23 @@ $$ S_A = \frac{V_{OUT}}{V_S \cdot B} = 0.847 \ \mathrm{mV/\left(V \cdot Gs\right
 
 \section{讨论问题}
 
-\subsection{如何根据$B$、$IH$和$UH$方向判断霍尔片的导电类型（N型或P型半导体），要求画图说明。（注：N型半导体中，载流子为电子；P型半导体中将载流子视为正离子）；}
+\subsection{如何根据$B$、$I_H$和$U_H$方向判断霍尔片的导电类型（N型或P型半导体），要求画图说明。（注：N型半导体中，载流子为电子；P型半导体中将载流子视为正离子）；}
 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{hall_element.jpg}
+    
+    图6 霍尔元件示意图
+\end{center}
 
+如图为霍尔元件的示意图。坐标轴规定了电流$I_H$、磁场$B$、电压$U_H$的正方向。
+
+假设霍尔片是$N$型半导体，载流子为电子。电子的流动方向与电流方向相反，由于洛伦兹力的作用，电子向图中的$f_L$方向偏转，造成$b$侧负电荷的积累，最终在$a$，$b$面建立霍尔电场$E_H$，以及电势差$U_H$。
+
+因此，通过测量霍尔电压$U_H$的极性，可以判断霍尔片的导电类型：
+\begin{itemize}
+    \item 如果$U_H$为正电压，则霍尔片为N型半导体。
+    \item 如果$U_H$为负电压，则霍尔片为P型半导体。
+\end{itemize}
 
 \subsection{估算本实验所用霍尔片的载流子浓度。}
 

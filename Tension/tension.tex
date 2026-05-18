@@ -181,23 +181,21 @@
 
 \section{数据处理}
 \subsection{测量室温下水的表面张力系数，并计算不确定度}
-据实验信息可知：
 
 \begin{align*}
     \overline{L} &= \pi \left(\overline{D_{\text{内}}} + \overline{D_{\text{外}}}\right) \\
     \overline{\alpha} &= \frac{\overline{K} \cdot \overline{V}}{\overline{L}} \\
-    \left(\frac{\Delta \alpha}{\overline{\alpha}}\right)^2 &= \left(\frac{\Delta K}{K}\right)^2 + \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 \\
-    \alpha &= \overline{\alpha} \pm \Delta \alpha 
+    \left(\frac{\Delta \alpha}{\alpha}\right)^2 &= \left(\frac{\Delta K}{K}\right)^2 + \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 \\
+    \alpha &= \alpha \pm \Delta \alpha 
 \end{align*}
 
 首先计算 $500mg$ 对应的电子秤的读数，为了表示方便，记 $ \delta V_{i,i+4} = \frac{V_{i+4}-V_{i}}{4} $
 
-$$ \Delta V = \frac{\sum\limits_{i = 1}^{4} \delta V_{i,i+4} }{4} = 536.9 \mu V $$
+$$ \Delta V = \frac{\sum\limits_{i = 1}^{4} \delta V_{i,i+4} }{4} = 0.491 mV $$
 计算逐差法对应的不确定度，在单次对电压的测量中，误差满足正态分布规律，C取3
 $$ U_s = \frac{0.001mV}{3} $$
 
-
-可以求得$V_i$对应的不确定度以及$\delta V_{i,i+4}$对应的不确定度：
+可求得$V_i$对应的不确定度以及$\delta V_{i,i+4}$对应的不确定度：
 
 \begin{align*}
     U_{V_i} &= \sqrt{2 \times \frac{U_s^2}{2^2}} = 235.7 nV \\
@@ -208,9 +206,9 @@ $$ U_s = \frac{0.001mV}{3} $$
 
 $$ U_{V} = \sqrt{U_{\delta V_{i,i+4}}^2 + \frac{\sum\limits_{i=1}^{4} \left(\delta V_{i,i+4} - \Delta V\right)^2}{4 \times (4-1)}} = 110.24 nV $$
 
-然后计算转换系数：
+计算转换系数：
 
-$$ \overline{K} = \frac{mg}{\Delta V} = 9.127 \times 10^{-3} N/mV $$
+$$ \overline{K} = \frac{mg}{\Delta V} = 9.98 \times 10^{-3} N/mV $$
 
 计算转换系数的不确定度 
 
@@ -292,6 +290,8 @@ $$ \sigma = \frac{7.11-7.02}{7.02} = 1.3\% $$
 经计算得到$30.9^\circ C$下其表面张力系数比$25.3^\circ C$要小一些，这是因为温度升高，分子热运动加剧，液体分子之间的吸引力会减小，于是表面张力系数减小。
 
 \section{实验结论及现象分析}
+（讨论液体表面张力系数测量中误差的来源，如何提高测量精度？）
+
 实验结果表明，测量值较理论值偏小，可能是因为拉出吊环后吊环上沾有少量水份，但是在实验误差允许范围内接受实验结果。
 
 测量仪器转换系数时，需要等到砝码盘稳定后再读数，否则由于加速度的影响会出现误差。主要的误差来自于吊环底面与水面不平行。判断是否平行，可以在降低水面的过程中观察水面是否在吊环外侧的同一纹理上。调整水位时不能太剧烈，否则水中产生明显的水波会干扰拉力计的施力。调整水位过快可能会导致拉断液面时测力计还未来得及探测到峰值，因此要缓慢调整液面高度。

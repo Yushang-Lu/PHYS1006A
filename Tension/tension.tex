@@ -189,90 +189,55 @@
     \alpha &= \alpha \pm \Delta \alpha 
 \end{align*}
 
-首先计算 $500mg$ 对应的电子秤的读数，为了表示方便，记 $ \delta V_{i,i+4} = \frac{V_{i+4}-V_{i}}{4} $
+将室温下的$D_{\text{内}}$和$D_{\text{外}}$代入第一个公式，计算得：
 
-$$ \Delta V = \frac{\sum\limits_{i = 1}^{4} \delta V_{i,i+4} }{4} = 0.491 mV $$
-计算逐差法对应的不确定度，在单次对电压的测量中，误差满足正态分布规律，C取3
-$$ U_s = \frac{0.001mV}{3} $$
+$$ \overline{L} = \pi \left(\overline{D_{\text{内}}} + \overline{D_{\text{外}}}\right) = \pi \left(33.08 + 34.81\right) = 213.17 mm $$
 
-可求得$V_i$对应的不确定度以及$\delta V_{i,i+4}$对应的不确定度：
+然后使用逐差法计算$\Delta V$，进而计算$\overline{K}$和$\overline{\alpha}$：
 
-\begin{align*}
-    U_{V_i} &= \sqrt{2 \times \frac{U_s^2}{2^2}} = 235.7 nV \\
-    U_{\delta V_{i,i+4}} &= \sqrt{2 \times \frac{U_{V_i}^2}{4^2}} = 83.3 nV
-\end{align*}
+$$ \Delta V = \sum_{i = 5}^{8} V_i - \sum_{i = 1}^{4} V_i = 0.491 mV $$
 
-将A类不确定度和B类不确定度合成有：
+$$ \overline{K} = \frac{mg}{\Delta V} = \frac{0.5 \times 10^{-3} \times 9.8}{\Delta V} = 9.98 \times 10^{-3} N/mV $$
 
-$$ U_{V} = \sqrt{U_{\delta V_{i,i+4}}^2 + \frac{\sum\limits_{i=1}^{4} \left(\delta V_{i,i+4} - \Delta V\right)^2}{4 \times (4-1)}} = 110.24 nV $$
+$$ \overline{\alpha} = \frac{\overline{K} \cdot \overline{V}}{\overline{L}} = \frac{9.98 \times 10^{-3} \times 1.661}{213.17 \times 10^{-3}} = 7.78 \times 10^{-2} N/m $$
 
-计算转换系数：
-
-$$ \overline{K} = \frac{mg}{\Delta V} = 9.98 \times 10^{-3} N/mV $$
-
-计算转换系数的不确定度 
-
-$$ U_K = \left|U_V\frac{\partial K}{\partial \Delta V}\right| = \frac{mg U_V}{\Delta V^2} = 1.874 \times 10^{-6} N/mV $$
-接下来计算室温下的水表面张力系数。 
-
-
-首先计算表面张力对应的测量值读数：
-
-$$ \overline{V^\ast} = \frac{\sum\limits_{i=1}^{5} V_i^\ast}{5} = 1.657 mV  $$
-
-
-接下来计算单次得到表面张力对应系数的不确定度： 
-
-$$ U_{V_i^\ast} = \sqrt{2 \times \frac{U_s^2}{2^2}} = 235.7 nV$$
-
-将A类不确定度和B类不确定度合成有：
-
-$$ U_{\overline{V^\ast}} = \sqrt{U_{V_i^\ast}^2 + \frac{\sum\limits_{i=1}^{5} \left(V_i^\ast - \overline{V^\ast} \right)^2}{5 \times (5-1)}} = 2.719 \mu V $$
-接下来求吊环内外径的不确定度，
-
-先求得均值：
+下面计算不确定度。已知实验中所用的500mg的砝码精度为0.25mg，电子秤最小读数为0.001mV，所以有：
 
 \begin{align*}
-    \overline{D_i} &= \frac{\sum\limits_{j=1}^{5} D_{ij}}{5} = 32.78 mm \\
-    \overline{D_o} &= \frac{\sum\limits_{j=1}^{5} D_{oj}}{5} = 34.75 mm
+\left(\frac{\Delta K}{K}\right)^2 &= \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta m}{m}\right)^2 \\
+&= \left(\frac{\frac{0.001}{\sqrt{3}}mV}{\frac{1}{16}\times7.856mV}\right)^2 + \left(\frac{\frac{0.25}{\sqrt{3}}mg}{500mg}\right)^2 \\
+&\approx 1.466 \times 10^{-6}
 \end{align*}
 
-求取测量吊环内外径的不确定度，游标卡尺极限误差0.02mm，误差服从均匀分布：
+而对于主不确定度中$\left(\frac{\Delta V}{V}\right)^2$的值，其计算方式为：
 
-\begin{align*}
-    A_i = \sqrt{\frac{\sum\limits_{j=1}^{5}\left(D_{ji}-\overline{D_i}\right)^2}{5 \times (5-1)}} = 7.75 \mu m \\
-    A_o = \sqrt{\frac{\sum\limits_{j=1}^{5}\left(D_{jo}-\overline{D_o}\right)^2}{5 \times (5-1)}} = 5.00\mu m \\
-\end{align*}
+$$ \left(\frac{\Delta V}{V}\right)^2 = \left(\frac{\frac{0.001}{\sqrt{3}}mV}{\frac{1}{16}\times1.661mV}\right)^2 = 1.208 \times 10^{-7} $$
 
-又有其B类不确定度$U_r = \frac{0.02}{3} mm $，有
+而20分度的游标卡尺的仪器误差为0.05mm，所以有：
 
-\begin{align*}
-    U_{\overline{D_i}} &= \sqrt{U_r^2 + A_i^2} = 10.22 \mu m \\
-    U_{\overline{D_o}} &= \sqrt{U_r^2 + A_o^2} = 8.33 \mu m 
-\end{align*}
-现求取表面张力系数：
+$$ \left(\frac{\Delta L}{L}\right)^2 = \left(\frac{\frac{0.05}{\sqrt{3}}mm}{\overline{D_\text{内}}+\overline{D_\text{外}}}\right)^2 \approx 1.808 \times 10^{-7} $$
 
-$$ \alpha = \frac{\overline{K} \cdot \overline{V}}{\pi\left(\overline{D_i}+\overline{D_o}\right)} = 7.13 \times 10^{-2} N/m $$
+将以上结果代入第四个公式，计算得：
 
-应用合成不确定度计算方法化简得到：
+$$ \left(\frac{\Delta \alpha}{\alpha}\right)^2 = \left(\frac{\Delta K}{K}\right)^2 + \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 = 1.768 \times 10^{-6} $$
 
-$$ E = \sqrt{\frac{U_K^2}{\overline{K}^2} + \frac{U_{\overline{V^\ast}}^2}{\overline{V^\ast}^2} + \frac{U_{\overline{D_i}}^2 + U_{\overline{D_o}}^2}{\left(\overline{D_i}+\overline{D_o}\right)^2}} = 0.2\% $$
+则不确定度为：
 
-求出不确定度：
+$$ \Delta\alpha = \alpha\times\sqrt{1.768 \times 10^{-6}} = 7.78 \times 10^{-2} \times 1.33 \times 10^{-3} \approx 1.03 \times 10^{-4} \, \text{N/m} $$
 
-$$ U = E \alpha = 0.000164 N/m $$
-$$ \alpha = (7.13 \pm 0.02) \times 10^{-2} N/m $$
-$$ P = 68.3 \% $$
+故最终表面张力系数为：
 
+$$ \alpha = \overline{\alpha} \pm \Delta\alpha = (7.78 \pm 0.10) \times 10^{-2} \, \text{N/m} $$
 
+置信概率$P = 68.3\%$
 
 \subsection{从附录中查出室温下水的表面张力系数$\alpha$的理论值，把实验结果与此值比较求相对误差,并进行分析。}
 
-经查表得到在$25.3^\circ C$下其表面张力系数为$7.18 N/m$，计算相对误差：
+从附录中查得在$25^\circ C$下，纯净水表面张力系数的公认值为$7.197\times10^{-2}N/m$，故相对误差为：
 
-$$ \sigma = \frac{7.18-7.13}{7.13} = 0.7\% $$
+$$ \sigma = \frac{\vert 7.78-7.197\vert }{7.197} = 8.1\% $$
 
-此误差不大，可以接受。误差可能来自吊环底面与水面不平行，同时也可能有来自拉断液膜时读数不及时造成的影响。
+此误差不大，可以接受。由于温度升高，水的表面张力系数会有所减小，所以在室温$26.7^\circ C$下测得的表面张力系数与公认值的差距会更小。误差可能来自吊环底面与水面不平行，同时也可能有来自拉断液膜时读数不及时造成的影响。
 
 \subsection{测量不同温度下表面张力系数，并与室温下水的表面张力系数理论值作分析比较。}
 

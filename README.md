@@ -1,6 +1,6 @@
 # PHYS1006A
 
-本项目包含了哈尔滨工业大学（深圳）(HITSZ) “大学物理实验” (PHYS1006A) 课程的 LaTeX 实验报告模板及配套的数据处理 Python 脚本。
+本项目包含了HITSZ “大学物理实验” (PHYS1006A) 课程的 LaTeX 实验报告模板及配套的数据处理 Python 脚本。
 
 ## 包含的实验项目
 
@@ -8,12 +8,12 @@
 
 - **Hall/**: 霍尔效应实验
 - **Osc/**: 示波器的原理与使用
-- **Qss/**: 准稳态法测量比热容（或相关实验）
+- **Qss/**: 准稳态法测量比热容
 - **RLC/**: RLC 串联谐振电路实验
 - **Speed/**: 声速的测量
 - **Tension/**: 液体表面张力系数测量
-- **Wireless/**: 无线电通信 / 无线传感器相关实验
-- **Wsb/**: 惠斯通电桥测量电阻 (Wheatstone Bridge)
+- **Wireless/**: 无线电力传输
+- **Wsb/**: 惠斯通电桥测量电阻
 - **Young/**: 拉伸法测杨氏弹性模量
 
 ## 使用指南
@@ -31,4 +31,4 @@
 ## 环境依赖
 
 - **LaTeX**: 推荐安装 TeX Live 或 MacTeX 等完整发行版，需支持 `xelatex`。
-- **Python**: (可选) 如果打算使用 `process.py` / `drawer.py` 等辅助脚本，需要 Python 环境，并可能需要安装 `numpy`、`matplotlib` 等科学计算计算库。
+- **Python**: (可选) 如果打算使用 `process.py` / `drawer.py` 等辅助脚本，需要 Python 环境，并可能需要安装 `numpy`、`matplotlib` 等科学计算库。

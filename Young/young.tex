@@ -46,7 +46,7 @@
 }\end{center}
 
 \begin{center}
-    \Large \textbf{实验内容 \underline{拉伸法测杨氏弹性模量}}
+    \Large \textbf{实验名称 \underline{拉伸法测杨氏弹性模量}}
 \end{center}
 
 \section{实验目的}
@@ -83,7 +83,7 @@
 \begin{table}[h]
     %\renewcommand\arraystretch{1.6}
     \centering
-    \caption{一次性数据}
+    \caption{一次性测量数据}
     \label{tab:once_data}
     \begin{tabular}{|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
         \hline
@@ -97,7 +97,7 @@
 \begin{table}[h]
     %\renewcommand\arraystretch{1.6}
     \centering
-    \caption{金属丝直径测量数据	螺旋测微器零差$d_0=\ \ \ \ \ \ \ \ \ mm$}
+    \caption{金属丝直径测量数据\ 螺旋测微器零差$d_0=\ \ \ \ \ \ \ \ \ mm$}
     \label{tab:D}
     \begin{tabular}{|m{2cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|}
         \hline
@@ -150,109 +150,94 @@
 
 （要有详细的计算过程，推导不确定度的表达式，计算杨氏模量及其不确定度，给出完整的测量结果表达形式）
 
-金属丝的平均值：
+实验测得：
 
-$$ \overline{d} = \overline{d_视} - d_0 =  0.546 + 0.055 = 0.601 mm $$
+$$ L = 693.0mm, H = 677.0mm, D = 40.52mm$$
+
+金属丝直径的平均值：
+
+$$ \overline{d} = \frac{1}{6}\sum_{i = 1}^{6}d_{\text{视}i} - d_0 = 0.582 + 0.065 = 0.647 mm $$
 
 根据实验原始数据，拉力视值每增加1kg，标尺刻度的改变量平均值:
 
-$$ \overline{\Delta x}_{by1} = \frac{\sum_{i=1}^{5}\Delta x_i}{5 \cdot 5} = 3.588 mm $$
+$$ \overline{\Delta x}_{l} = \frac{\sum_{i=1}^{5}\Delta x_i}{5 \cdot 5} = 4.396 mm $$
 
 所以金属丝的平均伸长量:
 
-$$ \overline{\Delta L} = \frac{D}{2H} \overline{\Delta x}_{by1} = \frac{44.22 mm}{2 \times 684.0 mm}\times 3.588 mm = 0.1160 mm $$
+$$ \overline{\Delta L} = \frac{D}{2H} \overline{\Delta x}_{l} = \frac{40.52 mm}{2 \times 677.0 mm}\times 4.396 mm = 0.1316 mm $$
 
 根据杨氏模量的表达式:
 
-$$ E = \frac{4 \Delta F}{\pi d^2} \cdot \frac{L}{\Delta L} = \frac{4\Delta m g}{\pi d^2} \cdot \frac{L}{\Delta L}$$
+$$ E = \frac{4\left(F'-F\right)}{\pi d^2} \cdot \frac{L}{\Delta L} = \frac{4\Delta m g}{\pi \overline{d}^2} \cdot \frac{L}{\overline{\Delta L}}$$
 
 得杨氏模量的计算值为:
 
-$$ \overline{E} = \frac{4\times 1.00 kg \times 9.8 N/kg}{\pi \times (0.601 mm)^2} \times \frac{726.5 mm}{0.1160 mm} = 2.16354 \times 10^{11} N/m^2 $$
-
+$$ \overline{E} = \frac{4\times 1.00 kg \times 9.8 N/kg}{\pi \times (0.647 mm)^2} \times \frac{693.0 mm}{0.1316 mm} = 1.570 \times 10^{11} N/m^2 $$
 
 ~\\
 接下来计算不确定度:
 
-根据杨氏模量的表达式$E = \frac{8\Delta mgLH}{\pi Dd^2}\cdot\frac{1}{\overline{\Delta x}_{by1}}$，得到合成不确定度表达式
+根据杨氏模量的表达式$E = \frac{8\Delta mgLH}{\pi Dd^2}\cdot\frac{1}{\overline{\Delta x}_{l}}$，得到合成不确定度表达式
 
-$$ E_E = \sqrt{\frac{U_L^2}{L^2}+\frac{U_H^2}{H^2}+\frac{U_D^2}{D^2}+\frac{U_{\overline{\Delta m}}^2}{{\overline{\Delta m}}^2}+\frac{4 U_{\overline{d}}^2}{{\overline{d}}^2}+\frac{U_{\overline{\Delta x}}^2}{\overline{\Delta x}^2}} $$
+$$ E_E = \sqrt{\frac{U_L^2}{L^2}+\frac{U_H^2}{H^2}+\frac{U_D^2}{D^2}+\frac{U_{\Delta m}^2}{{\overline{\Delta m}}^2}+\frac{4 U_{d}^2}{{\overline{d}}^2}+\frac{U_{\Delta x}^2}{\overline{\Delta x}^2}} $$
 
-1. 公式中 $L, H, D, \Delta 𝑚$ 只有B类不确定度，有 $ U = \frac{\Delta_仪}{\sqrt{3}} $
+1. 公式中 $L, H, D, \Delta m$ 只有B类不确定度，由$U = \frac{\Delta_仪}{\sqrt{3}}$可得：
 
-\begin{table}[h]
-    %\renewcommand\arraystretch{1.6}
-    \centering
-    \caption{误差限表}
-    \label{tab:delta_yi}
-    \begin{tabular}{|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
-        \hline
-        \textbf{\heiti 量具名称}&\textbf{\heiti 测量参数}&\textbf{\heiti 误差限} $\Delta_仪$ \\
-        \hline
-        钢卷尺&$L,H$&$0.8 mm $ \\
-        \hline
-        游标卡尺&$D$&$0.02 mm $ \\
-        \hline
-        螺旋测微器&$d$&$0.004 mm $ \\
-        \hline
-        数字拉力计&$m$&$0.005 kg $ \\
-        \hline
-        标尺&$\Delta x$&$0.5 mm$ \\
-        \hline
-    \end{tabular}
-\end{table}
+$$ U_L = U_H = \frac{\Delta_\text{仪}}{\sqrt{3}} = \frac{0.8}{\sqrt{3}} = 0.5mm $$
+$$ U_D = \frac{\Delta_\text{仪}}{\sqrt{3}} = \frac{0.02}{\sqrt{3}} = 0.012mm $$
+$$ U_{\Delta m} = \frac{\Delta_\text{仪}}{\sqrt{3}} = \frac{0.005}{\sqrt{3}} = 0.003mm $$
 
-2. 而d（使用螺旋测微器测量）既有A类不确定度，也有B类不确定度，故有:
+2. d（使用螺旋测微器测量）既有A类不确定度，也有B类不确定度，故有:
 
-$$ S_{\overline{d}} = \sqrt{\frac{\sum_{i=1}^{6}\left(d_视-\overline{d_视}\right)^2}{6\times(6-1)}} = 6.0553 \times 10^{-4} mm $$
+$$ S_{\overline{d}} = \sqrt{\frac{\sum_{i=1}^{6}\left(d_{\text{视}}-\overline{d}_{\text{视}}\right)^2}{6\times(6-1)}} = 2.667 \times 10^{-2} mm $$
 
 则计算得：
 
-$$ U_d = \sqrt{(S_{\overline{d}})^2+(\frac{\Delta_仪}{\sqrt{3}})^2} = 2.38747 \times 10^{-3} mm $$
+$$ U_d = \sqrt{(S_{\overline{d}})^2+(\frac{\Delta_仪}{\sqrt{3}})^2} = 2.677 \times 10^{-2} mm $$
 
+3. $\Delta x$为间接测量量，要计算其合成不确定度$U_{\Delta x}$，同样有：
 
-3. 而$\Delta x$为间接测量量，要计算其合成不确定度$U_{\Delta x}$，同样的我们有：
+$$ \overline{\Delta x} = \frac{\sum_{i=1}^{5}\Delta x_i}{5} = 21.98 mm $$
 
-$$ \overline{\Delta x} = \frac{\sum_{i=1}^{5}\Delta x_i}{5} = 17.49 mm $$
+所以有：
 
-有：
+$$ S_{\overline{\Delta x}} = \sqrt{\frac{\sum_{i=1}^{5}\left(\Delta x -\overline{\Delta x}\right)^2}{5\times(5-1)}} = 0.1158 $$
 
-$$ S_{\overline{\Delta x}} = \sqrt{\frac{\sum_{i=1}^{5}\left(\Delta x -\overline{\Delta x}\right)^2}{5\times(5-1)}} = 0.58189 $$
+因为这里$\Delta x$也是间接量，所以此处B类不确定度应当乘上一个系数，
 
-应注意，这里$\Delta x$也是间接量，此处B类不确定度应当乘上一个系数，
-
-$$u_B = \sqrt{2} \frac{\Delta_仪}{\sqrt{3}} = 0.40825 $$
+$$u_B = \sqrt{2} \frac{\Delta_仪}{\sqrt{3}} = 0.4082 $$
 
 合成得到：
-$$ U_{\Delta x}=\sqrt{(S_{\overline{\Delta x}})^2+(u_B)^2} = 0.71082$$
-
+$$ U_{\Delta x}=\sqrt{(S_{\overline{\Delta x}})^2+(u_B)^2} = 0.4243$$
 
 则最终的合成不确定度有：
 
-$$ E_E = \left[ \left(\frac{0.8}{\sqrt{3} \times 726.5 }\right)^2+\left(\frac{0.8}{\sqrt{3} \times 684.0}\right)^2+\left(\frac{0.02}{\sqrt{3} \times 44.22}\right)^2+\right. $$
-$$\left.\left(\frac{0.005}{\sqrt{3} \times 1.00}\right)^2+4  \left(\frac{2.38747 \times 10^{-3}}{0.601}\right)^2+\left(\frac{0.71082}{17.49}\right)^2\right]^{\frac{1}{2}} = 4.052\% $$
+$$ E_E = \left[ \left(\frac{0.8}{\sqrt{3} \times 693.0 }\right)^2+\left(\frac{0.8}{\sqrt{3} \times 677.0}\right)^2+\left(\frac{0.02}{\sqrt{3} \times 40.52}\right)^2+\right. $$
+$$\left.\left(\frac{0.005}{\sqrt{3} \times 1.00}\right)^2+4\times  \left(\frac{2.677 \times 10^{-2}}{0.647}\right)^2+\left(\frac{0.4243}{21.98}\right)^2\right]^{\frac{1}{2}} = 8.503\% $$
 
 ~
-$$U_E = \overline{E} \cdot E_E = 0.088 \times 10^{11} N/m^2 $$
-$$ E = \overline{E} \pm U_E = (2.164 \pm 0.088) \times 10^{11} N/m^2 $$
+$$U_E = \overline{E} \cdot E_E = 0.133 \times 10^{11} N/m^2 $$
+
+所以测量结果表达式：
+
+$$ E = \overline{E} \pm U_E = (1.570 \pm 0.133) \times 10^{11} N/m^2 $$
 $$P = 68.3\% $$
-\newpage
 
 \section{实验结论及误差分析}
-结论：测量得到金属丝的杨氏模量为 $(2.164±0.088)×10^{11} N/m^2 $，不确定度 $ E_E =4.052\% $，置信概率为 $68.3\% $，查询资料得到铁的杨氏模量为$2.11 \times 10^{11} N/m^2$，结果符合实际值。 
+实验结论：测量得到金属丝的杨氏模量为$(1.570\pm0.133)\times10^{11} N/m^2 $，相对不确定度$E_E =8.503\%$，置信概率为$68.3\%$，
 
-从计算不确定度的步骤可以发现，所有不确定度中数值最大的是$\frac{U_{\overline{\Delta x}}^2}{\overline{\Delta x}^2}$项，因此标尺是最主要的误差来源。 
+误差分析：从计算不确定度的步骤可以发现，所有不确定度中数值最大的是$\frac{4U_d^2}{\overline{d}^2}$项，因此金属丝直径测量是最主要的误差来源。
 \section{讨论问题}
 
 \subsection{材料相同，但粗细、长度不同的两根钢丝，它们的杨氏模量是否相同？}
-杨氏模量只与材料有关，所以这两根钢丝的杨氏模量相同。
+因为杨氏模量只与材料有关，所以这两根钢丝的杨氏模量相同。
 \subsection{从误差分析的角度分析为什么同是长度测量，需要采用不同的量具？}
-不同测量工具的的量程和误差大小不同。如果测量的长度较长，就必须选择量程大且误差大的量具；如果测量的长度较小，就应该选择量程小且误差小的量具。
+不同测量工具的的量程和误差大小不同。如果测量的长度较长，那么可以选择量程大且误差大的量具；如果测量的长度较小，则需要选择量程小且误差小的量具。
 \subsection{实验过程中为什么加力和减力过程，施力螺母不能回旋？}
-由于实验器材的原因，如果在加力和减力过程将施力螺母回旋，则会产生回程误差，降
-低实验结果的准确性。
-\subsection{用逐差法处理数据的优点是什么？应该注意什么问题？}
-优点：可以利用到的每一组实验数据，减小误差。 
+由于实验器材特性的原因，如果在加力和减力过程的过程中将施力螺母回旋，则会产生回程误差，导致实验结果的准确性降低。
 
-注意：所测量的数据应是偶数（4, 6, 8, …）组。
+\subsection{用逐差法处理数据的优点是什么？应该注意什么问题？}
+优点：可以利用到每一组实验数据，减小偶然误差。 
+
+注意问题：实验中所测量的数据应是偶数组。
 \end{document}
